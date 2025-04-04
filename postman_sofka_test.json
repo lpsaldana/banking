@@ -1,0 +1,437 @@
+{
+    "info": {
+        "_postman_id": "20b969c8-98cf-480e-b420-df7b49864c16",
+        "name": "sofka_test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "client",
+            "item": [
+                {
+                    "name": "create_client",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8080/auth/client/create",
+                            "path": [
+                                "auth",
+                                "client",
+                                "create"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\":\"leonardosaldana\",\n  \"password\":\"1234abc\",\n  \"personId\":1\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "list_clients",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8080/auth/client/list",
+                            "path": [
+                                "auth",
+                                "client",
+                                "list"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "delete_client",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "localhost:8080/auth/client/delete/1",
+                            "path": [
+                                "auth",
+                                "client",
+                                "delete",
+                                "1"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8080/auth/client/login",
+                            "path": [
+                                "auth",
+                                "client",
+                                "login"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"username\":\"leonardosaldana\",\n  \"password\":\"1234abc\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "change_password",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8080/auth/client/update",
+                            "path": [
+                                "auth",
+                                "client",
+                                "update"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\":1,\n  \"password\":\"1234\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "person",
+            "item": [
+                {
+                    "name": "create_person",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8080/auth/person/create",
+                            "path": [
+                                "auth",
+                                "person",
+                                "create"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"Leonardo Saldaña\",\n  \"gender\":\"Male\",\n  \"dni\":\"11111111111\",\n  \"address\":\"Loja Ecuador\",\n  \"phoneNumber\":\"0987654321\",\n  \"age\":35\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "list_people",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8080/auth/person/list",
+                            "path": [
+                                "auth",
+                                "person",
+                                "list"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "update_person",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8080/auth/person/update",
+                            "path": [
+                                "auth",
+                                "person",
+                                "update"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\":2,\n  \"name\":\"Leonardo Saldaña\",\n  \"dni\":\"11111111111\",\n  \"gender\":\"Male\",\n  \"address\":\"Loja Ecuador\",\n  \"phoneNumber\":\"0987654321\",\n  \"age\":37\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "account",
+            "item": [
+                {
+                    "name": "create-account",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8080/account/create-account",
+                            "path": [
+                                "account",
+                                "create-account"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"accountNumber\":\"1234\",\n  \"accountType\":\"AHORRO\",\n  \"balance\":\"1000\",\n  \"clientId\":1\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiY2xpZW50SWQiOiIxIiwiaWF0IjoxNzQzNzgxNjEyLCJleHAiOjE3NDM4NjgwMTJ9.GFwICeifnrE1ypXa7C3JFq52XmkCubufE2Gv--DQEpxJ81Afo2FduKwa-_-gZFdBcNSMoI_RJ0UnkKyjKtX7Fw",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "list_accounts",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8080/account/list",
+                            "path": [
+                                "account",
+                                "list"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiY2xpZW50SWQiOiIxIiwiaWF0IjoxNzQzNzEwNzg2LCJleHAiOjE3NDM3OTcxODZ9.wBAK7ntXMdWX-wS5uyU-EMa0SrfnWMJxSAvnQIuMoZviAK0AuILGoiXauml2m_y7y_7hmrtSW1AOOR7HSWuvHQ",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "update-account",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8080/account/update-account",
+                            "path": [
+                                "account",
+                                "update-account"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\":1,\n  \"accountNumber\":\"1234\",\n  \"accountType\":\"AHORRO\",\n  \"balance\":\"1200\",\n  \"status\":\"true\",\n  \"clientId\":1\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiY2xpZW50SWQiOiIxIiwiaWF0IjoxNzQzNzEwOTM0LCJleHAiOjE3NDM3OTczMzR9.naQJAxTrtpPs-9udE_9k7PIASKDfIoqG4sl0IupFj0li00jrtpqHTcOH6Uk4zxnFVd5GJVOu2k68UZPWK_KN2Q",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "delete-account",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "localhost:8080/account/delete-account/2",
+                            "path": [
+                                "account",
+                                "delete-account",
+                                "2"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiY2xpZW50SWQiOiIxIiwiaWF0IjoxNzQzNzEwOTM0LCJleHAiOjE3NDM3OTczMzR9.naQJAxTrtpPs-9udE_9k7PIASKDfIoqG4sl0IupFj0li00jrtpqHTcOH6Uk4zxnFVd5GJVOu2k68UZPWK_KN2Q",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "my-accounts",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8080/account/my-accounts",
+                            "path": [
+                                "account",
+                                "my-accounts"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiY2xpZW50SWQiOiIxIiwiaWF0IjoxNzQzNzEyMDE4LCJleHAiOjE3NDM3OTg0MTh9.OTcXsyHQ8b6WYGQNqvhKEw5O8sB5Hdp8MBIRpIJrbUWK-mgeC0YsDapofMpIbv9eQrEbt922Z9r_CJbDetHqmA",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "movements",
+            "item": [
+                {
+                    "name": "Deposito",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "localhost:8080/movement/create",
+                            "path": [
+                                "movement",
+                                "create"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"movementType\":\"DEPOSITO\",\n  \"accountId\":1,\n  \"amount\":\"200\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiY2xpZW50SWQiOiIxIiwiaWF0IjoxNzQzNzgxNjEyLCJleHAiOjE3NDM4NjgwMTJ9.GFwICeifnrE1ypXa7C3JFq52XmkCubufE2Gv--DQEpxJ81Afo2FduKwa-_-gZFdBcNSMoI_RJ0UnkKyjKtX7Fw",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "list_movements",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "localhost:8080/movement/list",
+                            "path": [
+                                "movement",
+                                "list"
+                            ],
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiY2xpZW50SWQiOiIxIiwiaWF0IjoxNzQzNzgxNjEyLCJleHAiOjE3NDM4NjgwMTJ9.GFwICeifnrE1ypXa7C3JFq52XmkCubufE2Gv--DQEpxJ81Afo2FduKwa-_-gZFdBcNSMoI_RJ0UnkKyjKtX7Fw",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

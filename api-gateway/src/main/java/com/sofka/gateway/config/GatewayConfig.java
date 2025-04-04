@@ -20,7 +20,7 @@ public class GatewayConfig {
                 .route("auth_service", r -> r.path("/auth/**")
                         .filters(f -> f.filter(gatewayFilter))
                         .uri("lb://auth-service"))
-                .route("account_service", r -> r.path("/account/**")
+                .route("account_service", r -> r.path("/account/**", "/movement/**")
                         .filters(f -> f.filter(gatewayFilter))
                         .uri("lb://account-service"))
                 .build();

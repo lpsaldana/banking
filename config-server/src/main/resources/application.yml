@@ -11,6 +11,8 @@ spring:
       server:
         native:
           search-locations: classpath:/config # local files for now
+        git:
+          uri: https://github.com/lpsaldana/banking/tree/main/config-server/src/main/resources/config
 
 eureka:
   client:
