@@ -4,8 +4,17 @@ server:
 spring:
   application:
     name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
   config:
-    import: optional:configserver:http://config-server:8888
+    import: optional:configserver:http://localhost:8888
+
+jwt:
+  secret: "your-very-secure-secret-key" # Must match auth-service
 
 eureka:
   client:

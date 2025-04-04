@@ -4,8 +4,20 @@ server:
 spring:
   application:
     name: account-service
+  datasource:
+    url: jdbc:h2:mem:accountdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  r2dbc:
+    url: r2dbc:h2:mem:///accountdb
+    username: sa
+    password:
   config:
-    import: optional:configserver:http://config-server:8888
+    import: optional:configserver:http://localhost:8888
 
 eureka:
   client:
