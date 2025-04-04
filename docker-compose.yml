@@ -1,0 +1,66 @@
+version: "3.8"
+
+services:
+  eureka-server:
+    build: ./eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - spring-net
+
+  config-server:
+    build: ./config-server
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    depends_on:
+      - eureka-server
+    networks:
+      - spring-net
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-server
+      - config-server
+    networks:
+      - spring-net
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  auth-service:
+    build: ./auth-service
+    container_name: auth-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+      - config-server
+      - api-gateway
+    networks:
+      - spring-net
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  account-service:
+    build: ./account-service
+    container_name: account-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka-server
+      - config-server
+      - api-gateway
+    networks:
+      - spring-net
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+networks:
+  spring-net:

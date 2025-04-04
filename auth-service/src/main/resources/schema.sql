@@ -1,0 +1,17 @@
+CREATE TABLE client (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    status BOOLEAN NOT NULL,
+    person_id BIGINT NOT NULL
+);
+
+CREATE TABLE person (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    gender VARCHAR(255),
+    dni VARCHAR(255) NOT NULL UNIQUE,
+    address VARCHAR(255),
+    phone_number VARCHAR(255),
+    age NUMBER
+);

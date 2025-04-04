@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test-clientdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  r2dbc:
+    url: r2dbc:h2:mem:///test-clientdb
+    username: sa
+    password:
