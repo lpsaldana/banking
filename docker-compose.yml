@@ -9,18 +9,6 @@ services:
     networks:
       - spring-net
 
-  config-server:
-    build: ./config-server
-    container_name: config-server
-    ports:
-      - "8888:8888"
-    depends_on:
-      - eureka-server
-    networks:
-      - spring-net
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
-
   api-gateway:
     build: ./api-gateway
     container_name: api-gateway
@@ -28,7 +16,6 @@ services:
       - "8080:8080"
     depends_on:
       - eureka-server
-      - config-server
     networks:
       - spring-net
     environment:
@@ -41,7 +28,6 @@ services:
       - "8081:8081"
     depends_on:
       - eureka-server
-      - config-server
       - api-gateway
     networks:
       - spring-net
@@ -55,7 +41,6 @@ services:
       - "8082:8082"
     depends_on:
       - eureka-server
-      - config-server
       - api-gateway
     networks:
       - spring-net
